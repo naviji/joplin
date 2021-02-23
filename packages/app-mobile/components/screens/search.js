@@ -123,7 +123,7 @@ class SearchScreenComponent extends BaseScreenComponent {
 
 		if (!this.isMounted_) return;
 
-		const parsedQuery = await SearchEngine.instance().parseQuery(query);
+		const parsedQuery = SearchEngine.instance().parseQuery(query);
 		const highlightedWords = SearchEngine.instance().allParsedQueryTerms(parsedQuery);
 
 		this.props.dispatch({
